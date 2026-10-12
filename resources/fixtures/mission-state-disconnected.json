@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "1.0",
+  "timestamp": 1791813600000,
+  "mission": {
+    "missionId": "M042",
+    "mode": "HIL",
+    "status": "PAUSED",
+    "elapsedSeconds": 742,
+    "coverage": 0.42
+  },
+  "probe": {
+    "x": 4.2,
+    "y": 7.1,
+    "state": "STOPPED"
+  },
+  "sensors": {
+    "radar": {
+      "available": false,
+      "rawScore": null,
+      "health": 0.93,
+      "quality": 0
+    },
+    "thermal": {
+      "available": false,
+      "rawScore": null,
+      "health": 0.96,
+      "quality": 0
+    },
+    "acoustic": {
+      "available": false,
+      "rawScore": null,
+      "health": 0.89,
+      "quality": 0
+    }
+  },
+  "fusion": {
+    "fusionScore": 0.81,
+    "confidence": 0.88
+  },
+  "localization": [
+    {
+      "candidateId": "C17",
+      "x": 4.6,
+      "y": 7.4,
+      "confidence": 0.91
+    }
+  ],
+  "victims": [
+    {
+      "victimTrackId": "V1",
+      "candidateId": "C17",
+      "status": "CONFIRMED",
+      "estimatedPosition": {
+        "x": 4.6,
+        "y": 7.4
+      },
+      "confidence": 0.91,
+      "vitality": 0.68,
+      "priority": "HIGH"
+    }
+  ],
+  "ai": [
+    {
+      "candidateId": "C17",
+      "classification": "TRUE_TRACK",
+      "probability": 0.94,
+      "uncertainty": 0.08,
+      "decision": "ACCEPT_TRUE_TRACK",
+      "abstained": false,
+      "modelVersion": "fixture-model-1.0",
+      "featureVersion": "1.0",
+      "timestamp": 1791813600000,
+      "explanation": "Consistent evidence across independent observations."
+    }
+  ],
+  "rescuePriority": [
+    "V1"
+  ],
+  "hardware": {
+    "connectionState": "DISCONNECTED",
+    "packetRateHz": 0,
+    "packetLossRate": 1
+  },
+  "timeline": [
+    {
+      "eventId": "E1",
+      "timestamp": 1791812858000,
+      "level": "INFO",
+      "message": "Search mission started."
+    },
+    {
+      "eventId": "E2",
+      "timestamp": 1791813590000,
+      "level": "INFO",
+      "message": "Candidate C17 localized. Track V1 updated."
+    },
+    {
+      "eventId": "E3",
+      "timestamp": 1791813600000,
+      "level": "ERROR",
+      "message": "Hardware connection lost. Mission paused. Last known results retained."
+    }
+  ]
+}
